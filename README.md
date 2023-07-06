@@ -1,35 +1,33 @@
-# Transpose
+# Roman Numerals
 
-Given a 2D array A, with row m, and column n, convert all rows to columns and columns to rows.
+Given a Roman numeral less than `4,000`, convert it to a decimal number. This [Wikipedia article](roman-numerals) describes Roman numerals in details, but here is a brief description:
 
-![2D Array](./array.png)
+Roman numerals consist of the following symbols:
 
-## Example
+```
+I is 1
 
-Input:
-An array of integers.
+V is 5
 
-```js
-[
-  [5, 12, 17, 9, 3],
-  [13, 4, 8, 14, 1],
-  [9, 6, 3, 7, 21],
-];
+X is 10
+
+L is 50
+
+C is 100
+
+D is 500
+
+M is 1,000
 ```
 
-Output:
-An array of integers
+A numeral is formed by a sequence of these symbols, where each symbol can be used up to 3 times to contribute to the total. Symbols are ordered left-to-right from larger to smaller, except for the following cases:
 
-```js
-[
-  [5, 13, 9],
-  [12, 4, 6],
-  [17, 8, 3],
-  [9, 14, 7],
-  [3, 1, 21],
-];
-```
+`I` placed before `V` or `X` indicates one less, so `4` is `IV` (one less than 5) and `9` is `IX` (one less than 10).
 
-Constraints
-1 <= m <= 10.
-1 <= n <= 10.
+`X` placed before `L` or `C` indicates ten less, so 40 is `XL` (ten less than 50) and 90 is `XC` (ten less than 100).
+
+`C` placed before `D` or `M` indicates a hundred less, so 400 is `CD` (a hundred less than 500) and `900` is `CM` (a hundred less than 1,000)
+
+For example, 11 is `XI`, `98` is `XCVIII`, `99` is `XCIX` and 1944 is `MCMXLIV`.
+
+[roman-numerals]: https://en.wikipedia.org/wiki/Roman_numerals
