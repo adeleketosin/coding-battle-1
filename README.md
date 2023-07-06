@@ -1,11 +1,35 @@
-# Brackets
+# Transpose
 
-We have a string of brackets, and we would like to make sure each bracket is properly opened and closed. The string has any number of `(, ), [, ], {, and }`. A valid string follows the common-sense rules of opening and closing brackets, so in other words, the formal rules are:
+Given a 2D array A, with row m, and column n, convert all rows to columns and columns to rows.
 
-There are an equal number of opening and closing brackets of each type. Each bracket is opened first, and later closed using the same type of bracket.
+![2D Array](./array.png)
 
-While a specific bracket is open, every other enclosed pair of brackets that is opened should be closed before the encompassing bracket closes.
+## Example
 
-For example, `{[()[]]()}()` is valid, but `[(])` is not. Given a string, your function should determine if it is valid or not.
+Input:
+An array of integers.
 
-Your function should output `valid`, or `invalid` depending on the given string.
+```js
+[
+  [5, 12, 17, 9, 3],
+  [13, 4, 8, 14, 1],
+  [9, 6, 3, 7, 21],
+];
+```
+
+Output:
+An array of integers
+
+```js
+[
+  [5, 13, 9],
+  [12, 4, 6],
+  [17, 8, 3],
+  [9, 14, 7],
+  [3, 1, 21],
+];
+```
+
+Constraints
+1 <= m <= 10.
+1 <= n <= 10.
